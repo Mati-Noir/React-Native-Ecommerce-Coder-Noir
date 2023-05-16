@@ -2,15 +2,17 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Button } from 'react-native'
 
-const CategoryBreadScreen = ({ navigation }) => {
+const ProductsScreen = ({ navigation, route }) => {
   return (
     <View>
       <Text>CategoryBreadScreen</Text>
-      <Button title="Navegar a Detail" onPress={() => navigation.navigate("Detail")} />
+      <Text>{route.params.name}
+      </Text>
+      <Button title="Navegar a Detail" onPress={() => navigation.navigate("Details")} />
     </View>
   )
 }
 
-export default CategoryBreadScreen
+export default ProductsScreen;
 
 const styles = StyleSheet.create({})

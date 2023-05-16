@@ -4,8 +4,9 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import CategoriesScreen from '../screen/CategoriesScreen'
-import CategoryBreadScreen from '../screen/CategoryBreadScreen'
-import BreadDetailScreen from '../screen/BreadDetailScreen'
+import { COLORS } from '../constants/colors'
+import DetailsScreen from '../screen/DetailsScreen'
+import ProductsScreen from '../screen/ProductsScreen'
 
 const ShopNavigator = () => {
 
@@ -13,10 +14,25 @@ const ShopNavigator = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name="Menu Principal" component={CategoriesScreen} />
-        <Stack.Screen name="Bread" component={CategoryBreadScreen} />
-        <Stack.Screen name="Detail" component={BreadDetailScreen} />
+      <Stack.Navigator initialRouteName='Home' screenOptions={{
+        headerStyle: {
+          backgroundColor: COLORS.primary,
+        },
+        headerTintColor: COLORS.cuaternary,
+        headerTitleStyle: {
+          fontWeight: "bold",
+        },
+      }}>
+        <Stack.Screen 
+          name="Home" 
+          component={CategoriesScreen} 
+          options={{
+            title: 'Categories',
+          }}/>
+        <Stack.Screen name="Products" component={ProductsScreen} options={({route}) => ({
+          title: route.params.title,
+        })}/>
+        <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )
