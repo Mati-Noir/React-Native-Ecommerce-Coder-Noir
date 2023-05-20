@@ -1,43 +1,50 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-
-import CategoriesScreen from '../screen/CategoriesScreen'
-import { COLORS } from '../constants/colors'
-import DetailsScreen from '../screen/DetailsScreen'
-import ProductsScreen from '../screen/ProductsScreen'
+import { COLORS } from "../constants/colors";
+import CategoriesScreen from "../screens/CategoriesScreen";
+import DetailsScreen from "../screens/DetailsScreen";
+import ProductsScreen from "../screens/ProductsScreen";
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const ShopNavigator = () => {
-
-  const Stack = createNativeStackNavigator()
+  const Stack = createNativeStackNavigator();
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home' screenOptions={{
+    <Stack.Navigator
+      initialRouteName="Home"
+      screenOptions={{
         headerStyle: {
-          backgroundColor: COLORS.primary,
+          backgroundColor: COLORS.header,
         },
-        headerTintColor: COLORS.cuaternary,
+        headerTintColor: COLORS.quaternary,
         headerTitleStyle: {
           fontWeight: "bold",
+          color: "white",
         },
-      }}>
-        <Stack.Screen 
-          name="Home" 
-          component={CategoriesScreen} 
-          options={{
-            title: 'Categories',
-          }}/>
-        <Stack.Screen name="Products" component={ProductsScreen} options={({route}) => ({
-          title: route.params.title,
-        })}/>
-        <Stack.Screen name="Details" component={DetailsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  )
-}
+      }}
+    >
+      <Stack.Screen
+        name="Home"
+        component={CategoriesScreen}
+        options={{
+          title: "Categories",
+        }}
+      />
+      <Stack.Screen
+        name="Products"
+        component={ProductsScreen}
+        options={({ route }) => ({
+          title: route.params.name,
+        })}
+      />
+      <Stack.Screen
+        name="Details"
+        component={DetailsScreen}
+        options={({ route }) => ({
+          title: route.params.name,
+        })}
+      />
+    </Stack.Navigator>
+  );
+};
 
-export default ShopNavigator
-
-const styles = StyleSheet.create({})
+export default ShopNavigator;

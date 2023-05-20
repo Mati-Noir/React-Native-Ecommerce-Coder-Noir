@@ -3,26 +3,26 @@ import { COLORS } from "../constants/colors";
 export const CATEGORIES = [
     {
         id: "1",
-        title: 'Harinas Puras',
-        img: "https://i.blogs.es/95d4c3/harina-trigo-tipos/1366_2000.jpg",
+        title: 'Hamburguesas',
+        img: "https://recetasdedon.com.mx/wp-content/uploads/2022/06/hamburguesas-historia-caracteristicas-preparacion-y-tipos.jpg",
         color: COLORS.primary,     
     },
     {
         id: "2",
-        title: 'Harinas Integrales',
-        img: "https://alcance.com.uy/wp-content/uploads/2019/01/Alcance-Nota-Harina.png",
+        title: 'Pizzas',
+        img: "https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2021/03/30/6063031b90a87.r_d.1083-871-0.jpeg",
         color: COLORS.secondary,     
     },
     {
         id: "3",
-        title: 'Panes Saborizados',
-        img: "https://www.gastrolabweb.com/u/fotografias/m/2020/10/16/f608x342-4330_34053_15.jpg",
+        title: 'Empanadas',
+        img: "https://www.infotuc.com.ar/wp-content/uploads/2022/02/empanadas-tucumanas-1024x683.jpg",
         color: COLORS.tertiary,     
     },
     {
         id: "4",
-        title: 'Otros Productos de Panaderia',
-        img: "https://www.semmexico.mx/wp-content/uploads/2020/10/productos-panaderia-1-o0j3tuuop0we13qcmwz2oj9bfnazcxxdq2z8m1w7de.jpg",
+        title: 'Ensaladas, Bebidas, Postres',
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JJ-KuEC4rbMWvRCOYMV9O9PIEZuFs7JO5YPRDPce568NZnW9hGXmpXqrPQjcrghXCRc&usqp=CAU",
         color: COLORS.cuaternary,     
     },
 ];

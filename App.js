@@ -3,6 +3,8 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { useFonts } from 'expo-font';
 import { useEffect, useState } from 'react';
 import ShopNavigator from './src/navigation/ShopNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import BottomTabNavigator from './src/navigation/BottomTabNavigator';
 
 export default function App() {
 
@@ -30,16 +32,9 @@ export default function App() {
   if (!loaded) return null
 
   return (
-    <ShopNavigator/>
-/*     <View style={styles.container}>
-      {
-        isPortrait ?
-          <Text style={styles.texto}>Vertical</Text>
-          :
-          <Text style={styles.texto2}>Horizontal</Text>
-      }
-      <StatusBar style="auto" />
-    </View>*/
+    <NavigationContainer>
+      <BottomTabNavigator />
+    </NavigationContainer>
   );
 }
 

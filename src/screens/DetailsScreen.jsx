@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const DetailsScreen = () => {
+const DetailsScreen = ({ route }) => {
+  const bread = route.params.product;
   return (
     <View>
-      <Text>BreadDetailScreen</Text>
+      <Text>{bread.name}</Text>
+      <Text>{bread.description}</Text>
+      <Text>${bread.price}</Text>
     </View>
   )
 }

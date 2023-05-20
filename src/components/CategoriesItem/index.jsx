@@ -1,20 +1,24 @@
-import React from 'react'
-import { TouchableOpacity, Image, Text, View } from 'react-native'
-import styles from "./styles"
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
-const CategoriesItem = ({item, onSelected}) => {
+import React from "react";
+import styles from "./styles";
+
+const CategoriesItem = ({ item, onSelected }) => {
   return (
     <View style={[styles.categoriesItem, { backgroundColor: item.color }]}>
-      <TouchableOpacity style={styles.container} onPress={() => onSelected(item)}>
+      <TouchableOpacity
+        style={styles.container}
+        onPress={() => onSelected(item)}
+      >
         <View style={styles.textContainer}>
-          <Text style={styles.titleCategories}>{item.title}</Text>
+          <Text style={styles.itemName}>{item.title}</Text>
         </View>
         <View style={styles.imageContainer}>
-          <Image style={styles.img} source={{uri: item.img}}/>
+          <Image style={styles.image} source={{ uri: item.img }} />
         </View>
       </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
 
-export default CategoriesItem
+export default CategoriesItem;
