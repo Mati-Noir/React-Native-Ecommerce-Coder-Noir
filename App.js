@@ -1,10 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { useFonts } from 'expo-font';
 import { useEffect, useState } from 'react';
 import ShopNavigator from './src/navigation/ShopNavigator';
 import { NavigationContainer } from '@react-navigation/native';
 import BottomTabNavigator from './src/navigation/BottomTabNavigator';
+import { Provider } from 'react-redux';
+import store from "./src/store";
 
 export default function App() {
 
@@ -32,9 +33,11 @@ export default function App() {
   if (!loaded) return null
 
   return (
-    <NavigationContainer>
-      <BottomTabNavigator />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <BottomTabNavigator />
+      </NavigationContainer>
+    </Provider>
   );
 }
 
@@ -51,5 +54,4 @@ const styles = StyleSheet.create({
   texto2: {
     fontFamily: "OpenSansRegular",
   }
-  
 });

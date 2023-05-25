@@ -15,7 +15,7 @@ const ShopNavigator = () => {
         headerStyle: {
           backgroundColor: COLORS.header,
         },
-        headerTintColor: COLORS.quaternary,
+/*         headerTintColor: COLORS.cuaternary, */
         headerTitleStyle: {
           fontWeight: "bold",
           color: "white",
@@ -26,7 +26,7 @@ const ShopNavigator = () => {
         name="Home"
         component={CategoriesScreen}
         options={{
-          title: "Categories",
+          title: "Bienvenido, que sale hoy?",
         }}
       />
       <Stack.Screen
