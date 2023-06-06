@@ -1,29 +1,37 @@
-import { FlatList, StyleSheet, View } from 'react-native'
-import React from 'react'
-import { ORDERS } from "../data/orders";
-import OrderItem from "../components/OrderItem"
+import { FlatList, StyleSheet, View } from "react-native";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import OrderItem from "../components/OrderItem";
+import { getOrders } from "../store/actions/orders.action";
 
 const OrdersScreen = () => {
+  const dispatch = useDispatch();
+  const orders = useSelector(state => state.orders.list);
 
-    const handleDeleteOrder = () => {
-      console.log("Delete Order");
-    };
+  useEffect(() => {
+    console.log("first");
+    dispatch(getOrders());
+  }, []);
 
-    const renderOrderItem = ({ item }) => (
-        <OrderItem item={item} onDelete={handleDeleteOrder} />
-    );
+  const handeleDeleteOrder = () => {
+    console.log("Eliminar orden");
+  };
+  const renderOrderItem = ({ item }) => (
+    <OrderItem item={item} onDelete={handeleDeleteOrder} />
+  );
 
   return (
     <View>
       <FlatList
-      data={ORDERS}
-      keyExtractor={item => item.id}
-      renderItem={renderOrderItem}
+        data={orders}
+        keyExtractor={item => item.id}
+        renderItem={renderOrderItem}
       />
     </View>
   );
 };
 
-export default OrdersScreen
+export default OrdersScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

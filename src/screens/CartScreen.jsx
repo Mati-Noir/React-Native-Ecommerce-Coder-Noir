@@ -1,12 +1,21 @@
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { CART } from "../data/cart";
 import React from "react";
 import CartItem from "../components/CartItem";
+import { useSelector , useDispatch} from "react-redux";
+import { confirm_cart, remove_item } from "../store/actions/cart.action";
 
 const CartScreen = () => {
+  const dispatch = useDispatch();
+  const items = useSelector(state => state.cart.items);
+  const total = useSelector(state => state.cart.total);
 
   const handleDeleteitem = (id) => {
     console.log(id);
+    dispatch(remove_item(id))
+  };
+
+  const handleConfirmCart = () => {
+    dispatch(confirm_cart(items, total))
   }
 
   const renderCartItem = ({ item }) => (
@@ -17,15 +26,15 @@ const CartScreen = () => {
     <View style={styles.container}>
       <View style={styles.list}>
         <FlatList
-        data={CART}
+        data={items}
         keyExtractor={item => item.id}
         renderItem={renderCartItem}/>
       </View>
       <View style={styles.footer}>
-        <TouchableOpacity style={styles.confirm} onPress={() => console.log("aaaaaa")}>
+        <TouchableOpacity style={styles.confirm} onPress={handleConfirmCart}>
           <Text>Confirmar</Text>
           <View>
-            <Text style={styles.priceText}>Total: $ 100</Text>
+            <Text style={styles.priceText}>{`Total: ${total}`}</Text>
           </View>
         </TouchableOpacity>
       </View>

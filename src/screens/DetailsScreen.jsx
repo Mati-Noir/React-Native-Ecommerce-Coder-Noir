@@ -1,9 +1,15 @@
 import { StyleSheet, Text, View, Image, Button } from 'react-native'
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { add_item } from '../store/actions/cart.action';
 
 const DetailsScreen = () => {
+  const dispatch = useDispatch();
   const bread = useSelector(state => state.products.selected);
+
+  const handleAddItem = () => {
+    dispatch(add_item(bread));
+  };
 
   return (
     <View style={styles.container}>
@@ -12,11 +18,11 @@ const DetailsScreen = () => {
       <Text style={styles.description}>{bread.description}</Text>
       <Text style={styles.precio}>${bread.price}</Text>
       <View style={styles.aceptar}>
-        <Button title='Agregar al carrito'></Button>     
+        <Button title='Agregar al carrito' onPress={handleAddItem}/>     
       </View>
     </View>
-  )
-}
+  );
+};
 
 export default DetailsScreen;
 
@@ -32,6 +38,8 @@ const styles = StyleSheet.create({
   },
   container: {
     alignItems: "center",
+    justifyContent: "center",
+    flex: 1,
   },
   description: {
     margin: 10,
