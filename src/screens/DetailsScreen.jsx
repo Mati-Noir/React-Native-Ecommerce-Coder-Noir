@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   image: {
     width: 400,
     height: 300,
+    marginTop: -100,
   },
   titulo: {
     fontSize: 28,

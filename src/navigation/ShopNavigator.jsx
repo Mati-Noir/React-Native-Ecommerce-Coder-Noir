@@ -19,6 +19,7 @@ const ShopNavigator = () => {
         headerTitleStyle: {
           fontWeight: "bold",
           color: "white",
+          fontSize: 22,
         },
       }}
     >

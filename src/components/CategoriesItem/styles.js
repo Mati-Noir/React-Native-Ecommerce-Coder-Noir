@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   categoriesItem: {
     flex: 1,
-    borderRadius: 10,
+    borderRadius: 40,
     shadowColor: "black",
     shadowOpacity: 0.2,
     shadowOffset: { width: 0, height: 2 },
@@ -30,11 +30,11 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "100%",
-    borderTopRightRadius: 10,
-    borderBottomRightRadius: 10,
+    borderTopRightRadius: 40,
+    borderBottomRightRadius: 40,
   },
   itemName: {
-    fontSize: 20,
+    fontSize: 22,
     textAlign: "center",
     fontWeight: "bold",
     color: "white",

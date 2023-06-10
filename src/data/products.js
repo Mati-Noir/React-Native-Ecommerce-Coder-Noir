@@ -107,4 +107,22 @@ export const PRODUCTS = [
         price: 500,
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/160/839/products/005-004-014_fanta-x-500-ml1-80bf8c51673fcdfcc215884684351451-1024-1024.jpg",
     },
+    {
+        id: "13",
+        category: "1",
+        name: "La Bk2",
+        description: "Doble medallon de carne de 80gr con fetas de bacon, cebolla crispy, cheddar y una feta de queso provoleta.",
+        weight: "240gr",
+        price: 3300,
+        img: "https://scontent.faep14-3.fna.fbcdn.net/v/t39.30808-6/297211238_5650899938303389_5212802723586867420_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XzThrivHKoAAX_TKb4Q&_nc_ht=scontent.faep14-3.fna&oh=00_AfBRApd8GiAEGOrOvhMg1JwrhzoCVOTCJ0wPIMSsPiHTTw&oe=64886351",
+    },
+    {
+        id: "14",
+        category: "3",
+        name: "Empanadas de Verdura",
+        description: "Empanadas rellenas de espinaca, queso rallado regginato, cebolla y queso muzzarella. Si te gusta ir tranquilo, puede ser la opcion para vos.",
+        weight: "200gr",
+        price: 400,
+        img: "https://media-cdn.tripadvisor.com/media/photo-s/1c/0d/bc/a4/empanada-verdura.jpg",
+    },
 ];

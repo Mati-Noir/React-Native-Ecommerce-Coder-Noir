@@ -7,7 +7,7 @@ const INPUT_CHANGE = "INPUT_CHANGE";
 const INPUT_BLUR = "INPUT_BLUR";
 
 const inputReducer = (state, action) => {
-  switch (action.key) {
+  switch (action.type) {
     case INPUT_CHANGE:
       return {
         ...state,
@@ -32,6 +32,7 @@ const Input = ({
   min,
   label,
   errorText,
+  ...rest
 }) => {
   const [inputState, dispatch] = useReducer(inputReducer, {
     value: initialValue ? initialValue : "",
@@ -70,6 +71,7 @@ const Input = ({
         value={inputState.value}
         onChangeText={textChangeHandler}
         onBlur={onBlurHandler}
+        {...rest}
       />
       {!inputState.isValid && inputState.touched && (
         <View style={styles.errorContainer}>

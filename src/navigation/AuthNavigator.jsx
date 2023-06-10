@@ -12,6 +12,7 @@ export default AuthNavigator = () => {
                 headerTitleStyle: {
                     fontWeight: "bold",
                 },
+                headerShown: false,
             }}
         >
             <Stack.Screen name="Login" component={AuthScreen} />
