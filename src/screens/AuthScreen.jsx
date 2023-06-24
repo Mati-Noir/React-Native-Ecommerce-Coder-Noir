@@ -73,7 +73,7 @@ const AuthScreen = () => {
         signUp(formState.inputValues.email, formState.inputValues.password)
       );
     } else {
-      Alert.alert("formulaio invalido", "Ingresa email y usuario valido", [
+      Alert.alert("Datos de usuario incorrectos", "Por favor, ingrese un mail y contraseña válidos", [
         { text: "ok" },
       ]);
     }
@@ -115,7 +115,7 @@ const AuthScreen = () => {
             />
             <Input
               id="password"
-              label="Password"
+              label="Contraseña"
               keyboardType="default"
               required
               password
@@ -145,7 +145,7 @@ export default AuthScreen;
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#aliceblue",
   },
   container: {
     paddingTop: 100,

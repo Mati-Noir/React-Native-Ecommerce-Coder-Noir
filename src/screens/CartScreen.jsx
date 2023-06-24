@@ -32,9 +32,9 @@ const CartScreen = () => {
       </View>
       <View style={styles.footer}>
         <TouchableOpacity style={styles.confirm} onPress={handleConfirmCart}>
-          <Text>Confirmar</Text>
+          <Text style={styles.confirmText}>Confirmar</Text>
           <View>
-            <Text style={styles.priceText}>{`Total: ${total}`}</Text>
+            <Text style={styles.priceText}>{`Total: $ ${total}`}</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 12,
-    backgroundColor: "#fff",
+    backgroundColor: "#aliceblue",
 /*     paddingBottom: 120, */
   },
   list: {
@@ -57,11 +57,11 @@ const styles = StyleSheet.create({
   footer: {
     flex: 1,
     padding: 12,
-    borderTopColor: "#ccc",
-    borderTopWidth: 1,
+    borderTopColor: "#F0B626",
+    borderTopWidth: 2,
   },
   confirm: {
-    backgroundColor: "#ccc",
+    backgroundColor: "#9DDF5A",
     borderRadius: 10,
     padding: 10,
     flexDirection: "row",
@@ -70,5 +70,8 @@ const styles = StyleSheet.create({
   },
   priceText: {
     fontSize: 18,
+  },
+  confirmText: {
+    fontSize: 17,
   }
 });

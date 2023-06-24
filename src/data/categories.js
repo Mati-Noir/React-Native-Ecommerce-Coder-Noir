@@ -21,7 +21,7 @@ export const CATEGORIES = [
     },
     {
         id: "4",
-        title: 'Ensaladas, Bebidas, Postres',
+        title: 'Bebidas',
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JJ-KuEC4rbMWvRCOYMV9O9PIEZuFs7JO5YPRDPce568NZnW9hGXmpXqrPQjcrghXCRc&usqp=CAU",
         color: COLORS.cuaternary,     
     },

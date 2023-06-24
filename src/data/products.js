@@ -114,7 +114,7 @@ export const PRODUCTS = [
         description: "Doble medallon de carne de 80gr con fetas de bacon, cebolla crispy, cheddar y una feta de queso provoleta.",
         weight: "240gr",
         price: 3300,
-        img: "https://scontent.faep14-3.fna.fbcdn.net/v/t39.30808-6/297211238_5650899938303389_5212802723586867420_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XzThrivHKoAAX_TKb4Q&_nc_ht=scontent.faep14-3.fna&oh=00_AfBRApd8GiAEGOrOvhMg1JwrhzoCVOTCJ0wPIMSsPiHTTw&oe=64886351",
+        img: "https://miro.medium.com/v2/resize:fit:1400/0*6eJbvsuOthfEbfcc.jpg",
     },
     {
         id: "14",

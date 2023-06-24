@@ -22,7 +22,7 @@ export default BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <View>
-              <Ionicons name="home" size={30} color="black" />
+              <Ionicons name="home" size={30} color="black" paddingTop={10} />
               <Text>Shop</Text>
             </View>
           ),
@@ -34,7 +34,7 @@ export default BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <View>
-              <Ionicons name="cart" size={30} color="black" />
+              <Ionicons name="cart" size={30} color="black" paddingTop={10} />
               <Text>Cart</Text>
             </View>
           ),
@@ -47,7 +47,7 @@ export default BottomTabNavigator = () => {
         options={{
           tabBarIcon: () => (
             <View>
-              <Ionicons name="list" size={30} color="black" />
+              <Ionicons name="list" size={30} color="black" paddingTop={10} />
               <Text>Orders</Text>
             </View>
           ),
@@ -59,7 +59,7 @@ export default BottomTabNavigator = () => {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: "#DC9117",
+    backgroundColor: "#FED48F",
     paddingTop: 5,
     height: 85,
     position: "absolute",
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 5,
     elevation: 5,
-    borderTopWidth: 10,
+    borderTopWidth: 1,
+    borderTopColor: "black",
   },
 });
