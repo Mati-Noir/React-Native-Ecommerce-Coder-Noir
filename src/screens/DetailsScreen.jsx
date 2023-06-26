@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, Button } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity, Alert } from 'react-native'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { add_item } from '../store/actions/cart.action';
@@ -11,6 +11,12 @@ const DetailsScreen = () => {
     dispatch(add_item(bread));
   };
 
+  const alertaAgregado = () => {
+    Alert.alert(
+      'Atroden',
+      'Producto Agregado al Carrito')
+  };
+
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={{ uri: bread.img }} />
@@ -18,7 +24,9 @@ const DetailsScreen = () => {
       <Text style={styles.description}>{bread.description}</Text>
       <Text style={styles.precio}>${bread.price}</Text>
       <View style={styles.aceptar}>
-        <Button title='Agregar al carrito' onPress={handleAddItem}/>     
+        <TouchableOpacity style={styles.botonAgregar} onPress={() => { handleAddItem(); alertaAgregado(); }}>
+          <Text style={styles.textoAgregar}>Agregar al carrito</Text>  
+        </TouchableOpacity>     
       </View>
     </View>
   );
@@ -55,5 +63,18 @@ const styles = StyleSheet.create({
   },
   aceptar: {
     margin: 10,
+  },
+  botonAgregar: {
+    backgroundColor:'green',
+    width: 200,
+    height: 40,
+    borderRadius: 15,
+  },
+  textoAgregar: {
+    textAlign: "center",
+    marginTop: 8,
+    color:"white",
+    fontWeight: "bold",
+    fontSize: 17,
   }
 });

@@ -15,7 +15,6 @@ const ShopNavigator = () => {
         headerStyle: {
           backgroundColor: COLORS.header,
         },
-/*         headerTintColor: COLORS.cuaternary, */
         headerTitleStyle: {
           fontWeight: "bold",
           color: "black",

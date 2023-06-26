@@ -125,4 +125,22 @@ export const PRODUCTS = [
         price: 400,
         img: "https://media-cdn.tripadvisor.com/media/photo-s/1c/0d/bc/a4/empanada-verdura.jpg",
     },
+    {
+        id: "15",
+        category: "4",
+        name: "Pepsi 500ml",
+        description: "La competencia a la marca mas conocida de gaseosas, si la pedis, vos sabras la diferencia ante la coca.",
+        weight: "500gr",
+        price: 500,
+        img: "https://inspiravinoteca.com/web/image/product.template/4521/image_1024?unique=e71f12d",
+    },
+    {
+        id: "16",
+        category: "2",
+        name: "Pizza Napolitana",
+        description: "Un clasico italiano junto con la tipica masa finita en el centro y gruesa en los bordes, junto con albahaca, queso y tomate.",
+        weight: "500gr",
+        price: 4000,
+        img: "https://www.clarin.com/img/2022/02/02/xqwJySBdj_1200x630__1.jpg",
+    },
 ];

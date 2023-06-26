@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
   },
   total: {
     fontSize: 18,
+    paddingTop: 10,
   },
 });
 

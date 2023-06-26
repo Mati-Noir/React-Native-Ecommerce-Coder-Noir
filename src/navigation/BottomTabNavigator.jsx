@@ -53,6 +53,20 @@ export default BottomTabNavigator = () => {
           ),
         }}
       />
+
+{/*       <BottomTabs.Screen
+        name="User"
+        component={OrdersNavigator}
+        options={{
+          tabBarIcon: () => (
+            <View>
+              <Ionicons name="person-circle" size={30} color="black" paddingTop={10} />
+              <Text>User</Text>
+            </View>
+          ),
+        }}
+      /> */}
+
     </BottomTabs.Navigator>
   );
 };
