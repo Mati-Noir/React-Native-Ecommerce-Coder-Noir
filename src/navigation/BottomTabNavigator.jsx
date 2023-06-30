@@ -4,6 +4,8 @@ import CartNavigator from "./CartNavigator";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import ShopNavigator from "./ShopNavigator";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import ReseñasNavigator from "./ReseñasNavigator";
+import ListaReseñasNavigator from "./ListaReseñasNavigator";
 
 const BottomTabs = createBottomTabNavigator();
 
@@ -23,7 +25,7 @@ export default BottomTabNavigator = () => {
           tabBarIcon: () => (
             <View>
               <Ionicons name="home" size={30} color="black" paddingTop={10} />
-              <Text>Shop</Text>
+              <Text>Menu</Text>
             </View>
           ),
         }}
@@ -35,7 +37,7 @@ export default BottomTabNavigator = () => {
           tabBarIcon: () => (
             <View>
               <Ionicons name="cart" size={30} color="black" paddingTop={10} />
-              <Text>Cart</Text>
+              <Text>Carrito</Text>
             </View>
           ),
         }}
@@ -48,24 +50,37 @@ export default BottomTabNavigator = () => {
           tabBarIcon: () => (
             <View>
               <Ionicons name="list" size={30} color="black" paddingTop={10} />
-              <Text>Orders</Text>
+              <Text>Ordenes</Text>
             </View>
           ),
         }}
       />
 
-{/*       <BottomTabs.Screen
-        name="User"
-        component={OrdersNavigator}
+      <BottomTabs.Screen
+        name="Reseñas"
+        component={ReseñasNavigator}
         options={{
           tabBarIcon: () => (
             <View>
-              <Ionicons name="person-circle" size={30} color="black" paddingTop={10} />
-              <Text>User</Text>
+              <Ionicons name="clipboard-outline" size={30} color="black" paddingTop={10} />
+              <Text>Opinar</Text>
             </View>
           ),
         }}
-      /> */}
+      />
+
+      <BottomTabs.Screen
+        name="ListaReseñas"
+        component={ListaReseñasNavigator}
+          options={{
+            tabBarIcon: () => (
+              <View>
+                <Ionicons name="list-circle-outline" size={30} color="black" paddingTop={10} />
+                <Text>Reseñas</Text>
+              </View>
+            ),
+          }}
+        />
 
     </BottomTabs.Navigator>
   );
@@ -75,7 +90,7 @@ const styles = StyleSheet.create({
   tabBar: {
     backgroundColor: "#FED48F",
     paddingTop: 5,
-    height: 85,
+    height: 83,
     position: "absolute",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 0 },
