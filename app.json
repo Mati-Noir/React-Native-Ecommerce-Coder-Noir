@@ -1,9 +1,13 @@
 {
   "expo": {
     "name": "Mi-Tienda-Noir",
-    "slug": "Mi-Tienda-Noir",
+    "slug": "react-native-coderhouse-noir-app",
     "version": "1.0.0",
     "icon": "./assets/icon.png",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -18,12 +22,24 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "13804770-2d38-4afa-a837-7d4e231a4627"
+      }
+    },
+    "owner": "mati-noir",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/13804770-2d38-4afa-a837-7d4e231a4627"
     }
   }
 }
